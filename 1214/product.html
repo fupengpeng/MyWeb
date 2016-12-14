@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>product</title>
+    <link rel="stylesheet" href="css/css.css">
+    <script src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/js.js"></script>
+    <style>
+
+    </style>
+</head>
+<body>
+
+<div id="header">
+    <!--划分头部区域-->
+    <div class="logo">
+        <img src="images/logo_03.gif" alt="">
+    </div>
+    <!--导航区域-->
+    <div class="nav">
+        <ul>
+            <li><a href="#">首页</a></li><!--使用a标签原因是：点击此内容实现跳转给定的网页链接-->
+            <li><a href="#">手机</a></li>
+            <li><a href="#">配件</a></li>
+            <li><a href="#">服务</a></li>
+            <li><a href="#">下载</a></li>
+        </ul>
+    </div>
+    <!--登录部分-->
+    <div class="login_box">
+        <a href="#">您好，请登录</a>
+        <span>|</span>
+        <a href="#">注册</a>
+        <img src="images/shoppCar_03.gif" alt="">
+        <a href="#0">购物车</a>
+    </div>
+    <!--搜索框盒子-->
+    <div class="search_box">
+        <!--搜索框内容以及搜索按钮-->
+        <label >
+            <!--<span>输入搜索内容</span>-->
+            <!--搜索框-->
+            <input type="text" class="text" placeholder="请输入搜索内容">
+        </label>
+        <!--搜索按钮-->
+        <input type="button" class="putIn">
+    </div>
+
+</div>
+
+<div id="banner">
+    <img src="images/banner.jpg" height="350" width="1190"/>
+</div>
+
+<!--主体部分-->
+<div id="content">
+    <!--选择栏-->
+    <div class="select">
+        <ul>
+            <li>手机分类：</li>
+            <li><input type="checkbox">全部</li>
+            <li><input type="checkbox">智能手机</li>
+            <li><input type="checkbox">功能手机</li>
+        </ul>
+        <ul>
+            <li>手机外观：</li>
+            <li><input type="checkbox">全部</li>
+            <li><input type="checkbox">触屏</li>
+            <li><input type="checkbox">直板</li>
+            <li><input type="checkbox">翻盖</li>
+        </ul>
+        <ul>
+            <li>手机系列：</li>
+            <li><input type="checkbox">全部</li>
+            <li><input type="checkbox">ELIFE系列</li>
+            <li><input type="checkbox">天鉴系列</li>
+            <li><input type="checkbox">风华系列额</li>
+            <li><input type="checkbox">语音王系列</li>
+            <li><input type="checkbox">+能量系列</li>
+            <li><input type="checkbox">大屏系列</li>
+            <li><input type="checkbox">其他系列</li>
+        </ul>
+        <ul style="border-bottom: 1px solid #ffffff;">
+            <li>排列方式：</li>
+            <li><input type="checkbox">上架时间</li>
+            <li><input type="checkbox">价格</li>
+            <li><input type="checkbox">销量</li>
+        </ul>
+    </div>
+    <!--手机商品栏-->
+    <div class="phone_list">
+        <!--第一行盒子-->
+        <div class="list_one">
+           <!--第一行第一列商品-->
+           <div class="list_one_phone">
+               <a href="#"><!--<img src="images/list_one_03.gif" alt="">--></a>
+               <h4>ELIFE S5.1</h4>
+               <span>5.15mm超薄智能手机</span>
+               <p>$1999</p>
+           </div>
+           <div class="list_one_phone">
+               <a href="#"><!--<img src="images/elife_03.gif" alt="">--></a>
+               <h4>ELIFE S5.5</h4>
+               <span>5.15mm超薄智能手机，至薄4G智能手机</span>
+               <p>$2299</p>
+           </div>
+           <div class="list_one_phone" style="boder-right:none;">
+               <a href="#"><img src="images/elife_03.gif" alt=""></a>
+               <h4>ELIFE S5.5</h4>
+               <span>1600万像素4G手机</span>
+               <p>$2699</p>
+           </div>
+           <div class="list_one_phone">
+               <a href="#"><img src="images/elife_03.gif" alt=""></a>
+               <h4>GL715</h4>
+               <span>多频段手机，前置500万像素</span>
+               <p>$1699</p>
+           </div>
+       </div>
+        <!--第二行盒子-->
+        <div class="list_one">
+            <!--第一行第一列商品-->
+            <div class="list_one_phone">
+                <a href="#"><img src="images/list_one_03.gif" alt=""></a>
+                <h4>ELIFE S5.1</h4>
+                <span>5.15mm超薄智能手机</span>
+                <p>$1999</p>
+            </div>
+            <div class="list_one_phone">
+                <a href="#"><img src="images/elife_03.gif" alt=""></a>
+                <h4>ELIFE S5.5</h4>
+                <span>5.15mm超薄智能手机，至薄4G智能手机</span>
+                <p>$2299</p>
+            </div>
+            <div class="list_one_phone" style="boder-right:none;">
+                <a href="#"><img src="images/elife_03.gif" alt=""></a>
+                <h4>ELIFE S5.5</h4>
+                <span>1600万像素4G手机</span>
+                <p>$2699</p>
+            </div>
+            <div class="list_one_phone">
+                <a href="#"><img src="images/elife_03.gif" alt=""></a>
+                <h4>GL715</h4>
+                <span>多频段手机，前置500万像素</span>
+                <p>$1699</p>
+            </div>
+        </div>
+        <!--第三行盒子-->
+        <div class="list_one">
+            <!--第一行第一列商品-->
+            <div class="list_one_phone">
+                <a href="#"><img src="images/list_one_03.gif" alt=""></a>
+                <h4>ELIFE S5.1</h4>
+                <span>5.15mm超薄智能手机</span>
+                <p>$1999</p>
+            </div>
+            <div class="list_one_phone">
+                <a href="#"><img src="images/elife_03.gif" alt=""></a>
+                <h4>ELIFE S5.5</h4>
+                <span>5.15mm超薄智能手机，至薄4G智能手机</span>
+                <p>$2299</p>
+            </div>
+            <div class="list_one_phone" style="boder-right:none;">
+                <a href="#"><img src="images/elife_03.gif" alt=""></a>
+                <h4>ELIFE S5.5</h4>
+                <span>1600万像素4G手机</span>
+                <p>$2699</p>
+            </div>
+            <div class="list_one_phone">
+                <a href="#"><img src="images/elife_03.gif" alt=""></a>
+                <h4>GL715</h4>
+                <span>多频段手机，前置500万像素</span>
+                <p>$1699</p>
+            </div>
+        </div>
+    </div>
+
+    <!--页码栏-->
+    <div class="page_btn">
+        <!--页码盒子-->
+        <div class="page_num">
+            <input type="button" value="1">
+            <input type="button" value="2">
+            <input type="button" value="3">
+            <input type="button" value="4">
+            <input type="button" value="5">
+            <input type="button" value="下一页" style="width: 75px;">
+        </div>
+    </div>
+</div>
+
+<!--尾部布局-->
+<!--包裹尾部布局的大盒子-->
+<div id="foot">
+    <dl>
+        <dt><img src="images/s1_03.gif" alt=""></dt>
+        <dd><a href="#"><p>7天</p><p>退货保证</p></a></dd>
+    </dl>
+    <dl>
+        <dt><img src="images/s2_03.gif" alt=""></dt>
+        <dd><a href="#"><p>30天</p><p>退货保证</p></a></dd>
+    </dl>
+    <dl>
+        <dt><img src="images/s3_03.gif" alt=""></dt>
+        <dd><a href="#"><p>99元起</p><p>全场免运费</p></a></dd>
+    </dl>
+    <dl>
+        <dt><img src="images/s4_03.gif" alt=""></dt>
+        <dd><a href="#"><p>586家</p><p>售后服务点</p></a></dd>
+    </dl>
+</div>
+<div id="about">
+    <ul>
+        <h4>关于金立</h4>
+        <li><a href="">企业荣誉</a></li>
+        <li><a href="">金立体验店</a></li>
+        <li><a href="">代理商专区</a></li>
+        <li><a href="">加入金立</a></li>
+        <li><a href="">联系我们</a></li>
+    </ul>
+    <ul>
+        <h4>新闻资讯</h4>
+        <li><a href="">公司新闻</a></li>
+        <li><a href="">媒体报道</a></li>
+        <li><a href="">金立月刊</a></li>
+    </ul>
+    <ul>
+        <h4>购物指南</h4>
+        <li><a href="">购物流程</a></li>
+        <li><a href="">支付方式</a></li>
+        <li><a href="">配送说明及费用</a></li>
+        <li><a href="">订单管理</a></li>
+        <li><a href="">常见购物问题</a></li>
+    </ul>
+    <ul>
+        <h4>售后服务</h4>
+        <li><a href="">售后政策</a></li>
+        <li><a href="">销售服务网点</a></li>
+        <li><a href="">签收须知</a></li>
+        <li><a href="">物流查询</a></li>
+    </ul>
+    <ul>
+        <h4>关注我们</h4>
+        <li><a href="">新浪微博</a></li>
+        <li><a href="">腾讯微博</a></li>
+        <li><a href="">QQ空间</a></li>
+        <li><a href="">加入金立</a></li>
+    </ul>
+    <ul>
+        <li><img src="images/erweima_10.gif" alt=""></li>
+    </ul>
+</div>
+
+</body>
+</html>

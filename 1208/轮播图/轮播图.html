@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>轮播图</title>
+    <!--link  链接进css-->
+    <link rel="stylesheet" href="style.css">
+    <script src="jquery.min.js"></script>
+    <script src="lunbo.js"></script>
+</head>
+<body>
+<!--轮播显示区域-->
+<div class="bigbox">
+    <!--轮播主体-->
+    <div class="boxContainer">
+        <div class="boxItem red" ><img src="../../images/ab1.jpg" alt=""/></div>
+        <div class="boxItem yellow" ><img src="../../images/ab2.jpg" alt=""></div>
+        <div class="boxItem blue" ><img src="../../images/ab3.jpg" alt=""></div>
+        <div class="boxItem orange"><img src="../../images/ab4.jpg" alt=""></div>
+        <div class="boxItem green"><img src="../../images/ab5.jpg" alt=""></div>
+        <div class="boxItem red" ><img src="../../images/ab1.jpg" alt=""></div><!--再次轮播图片1  是因为图片5向图片1切换时会出现卡顿现象-->
+    </div>
+    <!--5个轮播标签-->
+    <ul>
+        <li class="active">1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+    <!--左右切换按钮-->
+    <div class="btn left">&lt;</div>
+    <div class="btn right">&gt;</div>
+</div>
+</body>
+
+</html>

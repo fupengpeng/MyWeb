@@ -1,0 +1,25 @@
+样式表：
+    1.外部样式表：
+        <head>
+            <link rel="stylesheet" type="text/css" href="mystyle.css">
+        </head>
+    2.内部样式表：
+        <head>
+            <meta charset="UTF-8">
+            <title>hahha</title>
+            <style>
+                .box,.boxa{
+                    width:800px;
+                    height:200px;
+                    font-size: 70px;
+                    color: #060;
+                    margin:0 auto;
+                }
+            </style>
+            <script src="jquery.min.js"></script>
+        </head>
+    3.内联样式
+        <p style="color:sienna;height:100px;"></p>
+    4.多重样式：以上三种样式可配合使用（优先级：内联样式>内部样式表>外部样式表）
+css背景：
+    1.background-color:

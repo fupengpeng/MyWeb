@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jingdong_left</title>
+    <style>
+        #logo {
+            background: url("../images/logo.v2.png");
+            width: 190px;
+            height: 172px;
+        }
+        a:hover{
+            color: red;
+        }
+        #aaaa{
+
+        }
+        ul{
+            list-style: none;
+            position: relative;
+            padding: 0px;
+        }
+        a{
+            text-decoration: none;
+            font-weight: 900;
+            font-size: 20px;
+            color: #666666;
+        }
+        li{
+
+            padding: 5px;
+        }
+        #kill_detail{
+            position: absolute;
+            top: 35px;
+            display: none;
+        }
+        #kill_detail{
+            clear: both;
+        }
+    </style>
+    <!--1.引入jquery文件-->
+    <script src="../1209/jquery.min.js"></script>
+</head>
+<body>
+<div class="logo" id="logo">
+    <h1 >
+        <a href="https://www.jd.com">jingdong </a>
+    </h1>
+
+</div>
+<div>
+    <!--u>li*9 tab实现-->
+    <ul>
+        <li id="kill"><a href="http://miaosha.jd.com/">家用电器</a></li>
+        <div id="kill_detail">
+            <ul>
+                <li>asdfa</li>
+                <li>alsdf</li>
+            </ul>
+        </div>
+        <li><a href="http://miaosha.jd.com/">手机</a>/<a href="http://miaosha.jd.com/">运营商</a>/<a href="http://miaosha.jd.com/">数码</a></li>
+        <li><a href="http://miaosha.jd.com/">电脑办公</a></li>
+        <li><a href="http://miaosha.jd.com/">家居</a>/<a href="http://miaosha.jd.com/">手机</a>/<a href="http://miaosha.jd.com/">运营商</a><a href="http://miaosha.jd.com/">数码</a></li>
+        <li><a href="http://miaosha.jd.com/">男装</a>/<a href="http://miaosha.jd.com/">手机</a>/<a href="http://miaosha.jd.com/">运营商</a><a href="http://miaosha.jd.com/">数码</a></li>
+        <li><a href="http://miaosha.jd.com/">个护化妆</a>/<a href="http://miaosha.jd.com/">手机</a>/<a href="http://miaosha.jd.com/">数码</a></li>
+        <li><a href="http://miaosha.jd.com/">鞋靴</a>/<a href="http://miaosha.jd.com/">手机</a>/<a href="http://miaosha.jd.com/">运营商</a><a href="http://miaosha.jd.com/">数码</a></li>
+        <li><a href="http://miaosha.jd.com/">运动</a>/<a href="http://miaosha.jd.com/">手机</a>/<a href="http://miaosha.jd.com/">数码</a></li>
+        <li><a href="http://miaosha.jd.com/">汽车</a>/<a href="http://miaosha.jd.com/">汽车</a></li>
+        <li><a href="http://miaosha.jd.com/">母婴</a>/<a href="http://miaosha.jd.com/">汽车</a></li>
+        <li><a href="http://miaosha.jd.com/">食品</a>/<a href="http://miaosha.jd.com/">汽车</a></li>
+        <li><a href="http://miaosha.jd.com/">医药保健</a>/<a href="http://miaosha.jd.com/">汽车</a></li>
+        <li><a href="http://miaosha.jd.com/">图书</a>/<a href="http://miaosha.jd.com/">汽车</a></li>
+        <li><a href="http://miaosha.jd.com/">彩票</a>/<a href="http://miaosha.jd.com/">汽车</a></li>
+        <li><a href="http://miaosha.jd.com/">理财</a>/<a href="http://miaosha.jd.com/">汽车</a></li>
+    </ul>
+</div>
+</body>
+<script>
+    $(function () {
+//        hover鼠标悬停事件
+        $("#kill_detail").slideDown(1300,function () {
+            console.log("展示二级菜单");
+        });//这里1300表示在1300毫秒内，完成了这个动画，第二个参数为回掉函数
+    }),function () {//鼠标移出时，执行此函数
+        $("#kill_detail").slideUp(200);
+    };
+</script>
+
+</html>

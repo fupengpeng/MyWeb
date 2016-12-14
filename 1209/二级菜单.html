@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>二级菜单</title>
+    <style>
+        *{
+            margin: 0;
+            padding:0;
+        }
+        ul,li{
+            list-style: none;
+        }
+        .boxContainer{
+            height:30px;
+            width:450px;
+            border: 1px solid darkblue;
+            background: skyblue;
+            margin:100px auto;/*100px  下移100px*/
+        }
+        .box{
+            float: left;
+            margin-right: 10px;
+
+        }
+        .box h1{
+            font-size: 25px;
+            cursor: pointer;
+        }
+        ul{
+            background: darkmagenta;
+            display: none;
+        }
+        ul li{
+            text-align: center;
+        }
+    </style>
+    <script src="jquery.min.js"></script>
+    <script src="move.js"></script>
+</head>
+<body>
+<div class="boxContainer">
+    <div class="box">
+        <h1>一级菜单</h1>
+        <ul>
+            <li>二级菜单</li>
+            <li>二级菜单</li>
+            <li>二级菜单</li>
+            <li>二级菜单</li>
+        </ul>
+    </div>
+
+    <div class="box">
+        <h1>一级菜单</h1>
+        <ul>
+            <li>二级菜单</li>
+            <li>二级菜单</li>
+            <li>二级菜单</li>
+            <li>二级菜单</li>
+        </ul>
+    </div>
+
+    <div class="box">
+        <h1>一级菜单</h1>
+        <ul>
+            <li>二级菜单</li>
+            <li>二级菜单</li>
+            <li>二级菜单</li>
+            <li>二级菜单</li>
+        </ul>
+    </div>
+
+    <div class="box">
+        <h1>一级菜单</h1>
+        <ul>
+            <li>二级菜单</li>
+            <li>二级菜单</li>
+            <li>二级菜单</li>
+            <li>二级菜单</li>
+        </ul>
+    </div>
+</div>
+</body>
+<script>
+    $(function () {
+        $(".box").hover(function () {//鼠标划入事件
+            $(this).find("ul")//查找ul标签
+//                .show();
+                .slideDown("1000","elasticOut");//展示二级菜单
+        },function () {//鼠标划出事件
+            $(this).find("ul").slideUp("600","elasticIn");
+        });
+    });
+
+
+</script>
+</html>

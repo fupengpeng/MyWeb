@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ClearSetInterval</title>
+</head>
+<body>
+<div id="text">
+    49
+</div>
+<button id="start">kaishi</button>
+<button id="stop">jieshu</button>
+</body>
+<script src="轮播图/jquery.min.js"></script>
+<script>
+    var index=0;
+    var time=null;
+    $("#start").click(function () {
+        timer=setInterval(function () {
+            index++;
+            $("#text").text(index);
+        },1000);
+    });
+    $("#stop").click(function () {
+        clearInterval(timer);
+    })
+</script>
+</html>

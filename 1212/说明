@@ -1,0 +1,7 @@
+transform：scale（a） a是数字
+作用：用来放大或者缩小所选中的元素
+transform：translate(150px,100px);   150px  说明选定对象平移（向右）的像素数，取负值时是反向平移。 100px  说明选定对象平移（向下）像素.  当translate只有一个参数时默认向右移动，
+transform：translateX（）  水平方向平移
+transform：translateY（）  竖直方向平移
+transform: rotate(20deg);  以中心点为中心旋转20度
+transform: skew(0deg,3deg);  第一个参数表示横向错切， 第二个参数表示竖向错切。

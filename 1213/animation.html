@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>animation</title>
+    <style>
+        .anited_div{
+            width:60px;
+            height:80px;
+            background: red;
+            color: #ffffff;
+            position: relative;
+            font-size: 20px;
+            padding:20px 10px 0 10px;
+            /*animation: move 5s ease 2s 5;  参数1：调用写好的动画移动方法  参数2：动画变化过程持续时间  参数3：？？？  参数4：等待多长时间开始  参数5：循环次数（可直接设置）*/
+            animation: move 5s ease 2s 5;
+        }
+        @keyframes move {
+            0%{  transform: rotate(0deg);
+                left:0px;}
+            25%{transform: rotate(20deg);left:0px;}
+            50%{transform: rotate(0deg);left:500px;}
+            55%{transform: rotate(360deg);left:500px;}
+            70%{transform: rotate(0deg);left:500px;background: #006600;}
+            85%{transform: rotate(360deg);left:250px;}
+            100%{transform: rotate(-360deg);left:0px;}
+        }
+    </style>
+</head>
+<body>
+<div class="anited_div">css 3 动画</div>
+</body>
+</html>

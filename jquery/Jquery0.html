@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jquery01</title>
+    <style>
+        /*id选择器*/
+        #showArea{
+            width:200px;
+            height: 200px;
+            background: #ffaadd;
+        }
+        a:hover{
+            color: #f00;
+        }
+        #hideArea{
+
+        }
+    </style>
+    <!--1.引入jquery文件-->
+    <script src="../1209/jquery.min.js"></script>
+</head>
+<body>
+<!--jquery（js）是用来操作网页中的元素和浏览器-->
+<input type="button" id="clickMe" value="点击我">
+<input type="button" id="click-baidu" value="点击百度下">
+<div id="hideArea">
+    <a href="https://www.baidu.com/">百度一下</a>
+</div>
+</body>
+
+<div id="showArea">
+</div>
+
+
+<!--2.一般将javascript代码写在body标签后面，写在script标签中-->
+<script>
+    //3.文档就绪函数，表示文档加载完成之后，再调用function中的代码*/
+    $(function () {
+        /*$("#clickMe")  选择器，和css一样，分三种
+        * 选择器后面可以通过.事件名（）来添加一个事件*/
+        $("#clickMe").click(function () {
+            //也可以再选择器后通过.action名()来让被选中的元素执行一个行为
+            $("#showArea").toggle();//开关，显示/隐藏
+        });
+    });
+</script>
+</html>

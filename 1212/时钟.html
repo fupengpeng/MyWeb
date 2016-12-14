@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>时钟</title>
+    <style>
+        #bigbox{
+            width:600px;
+            height:600px;
+            margin:0 auto;
+            position: relative;
+            background: url("../images/biao.jpg");
+            background-size: contain;
+        }
+        #shizhen{
+            width:8px;
+            height:100px;
+            background: blue;
+            border-radius: 8px;
+            position: absolute;
+            left:296px;
+            top:200px;
+            /*transform: rotate(180deg);*/
+            transform-origin: 50% 100%;
+        }
+        #fenzhen{
+            width:6px;
+            height:120px;
+            background: green;
+            position: absolute;
+            left:297px;
+            top:180px;
+            border-radius: 6px;
+            /*transform: rotate(270deg);*/
+            transform-origin: 50% 100%;
+        }
+        #miaozhen{
+            width:4px;
+            height:130px;
+            background: red;
+            position: absolute;
+            left:298px;
+            top:170px;
+            border-radius: 4px;
+            /*transform: rotate(450deg);*/
+            transform-origin: 50% 100%;
+        }
+        #bot{
+            width:30px;
+            height:30px;
+            border-radius: 50%;
+            left:285px;
+            top:285px;
+            background: yellow;
+            position: absolute;
+        }
+    </style>
+    <script src="jquery.min.js"></script>
+</head>
+<body>
+<div id="bigbox">
+    <div id="shizhen"></div>
+    <div id="fenzhen"></div>
+    <div id="miaozhen"></div>
+    <div id="bot"></div>
+</div>
+</body>
+<script>
+    setInterval(function () {
+        var time = new Date();//初始化当前时间
+        var hours = time.getHours();//获取当前时间的时
+        var minutes = time.getMinutes();
+        var seconds = time.getSeconds();
+        $("#miaozhen")//获取对象
+            .css//对象事件
+            ("transform","rotate("//修改对象的transform属性
+                +seconds*6+"deg)");//每过一秒转动秒数乘以6度
+        $("#fenzhen").css("transform","rotate("+minutes*6+"deg)");
+        if(hours*30>360){
+            hours = hours - 12;
+        }
+        $("#shizhen").css("transform","rotate("+""+(hours*30+minutes*0.5)+"deg)");
+    },1000)
+
+</script>
+</html>

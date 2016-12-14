@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>鼠标mouseenter，mouseleave，mouseover，mouseout事件</title>
+    <style>
+        div{
+            width:300px;
+            height:300px;
+            background: #666;
+        }
+    </style>
+    <script src="../1209/jquery.min.js"></script>
+</head>
+<body>
+<div>
+
+</div>
+</body>
+<script>
+    $(function () {
+//        $("div").mouseenter(function () {
+//            $(this).text("鼠标进入了元素");
+//        });
+//        $("div").mouseleave(function () {
+//            $(this).text("鼠标离开了元素");
+//        });
+        $("div").mouseover(function () {
+            $(this).text("鼠标进入了元素");
+        });
+        $("div").mouseout(function () {
+            $(this).text("鼠标离开了元素");
+        });
+    })
+</script>
+</html>

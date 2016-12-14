@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>隐藏展示</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background: burlywood;
+        }
+        .btn{
+            width:100px;
+            height: 100px;
+            background: darkmagenta;
+        }
+    </style>
+    <script src="jquery.min.js"></script>
+</head>
+<body>
+<div>
+
+</div>
+<button class="btn btn1">
+    点击隐藏div
+</button>
+<button class="btn btn2">
+    点击展示div
+</button>
+</body>
+<script>
+    $(".btn1").click(function () {
+        alert("已隐藏")
+        $("div").hide();
+    });
+    $(".btn2").click(function () {
+        alert("已展示");
+        $("div").show();
+    });
+</script>
+</html>

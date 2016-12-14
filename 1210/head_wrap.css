@@ -1,0 +1,22 @@
+
+.head_wrap{
+    width: 10000px;
+    height:50px;
+    background: #5C626E;
+    position: relative;
+}
+.head{
+    height: 50px;
+    width: 700px;
+    position: relative;
+    margin:0 auto;
+}
+.head_top{
+    width:100px;
+    height: 50px;
+
+    float: left;
+}
+ul{
+    list-style: none;
+}

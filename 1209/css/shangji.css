@@ -1,0 +1,256 @@
+.head_wrap{
+    /*顶上条目的背景等的设置*/
+    min-width: 1260px;
+    height: 50px;
+    background: #5c626e;
+    position: relative;
+}
+.head{
+    /*条目中字体条目的背景等设置*/
+    width: 1260px;
+    height: 50px;
+    position: relative;
+    margin: 0 auto;
+color: white;
+}
+.head .head_top{
+    /*滑动到可下拉条目上，下拉菜单展示设置*/
+    font-size: 20px;
+    line-height: 50px;
+    padding: 0px 23px;
+    height: 50px;
+    float: left;
+    position: relative;
+    cursor: pointer;
+}
+.head .head_top:hover{
+    background: red;
+
+}
+.head .head_top .head_bj{
+    width: 14px;
+font-size: 14px;
+    top: 17px;
+    line-height: 14px;
+    right: 21px;
+
+    height: 14px;
+    position: absolute;
+}
+.head_top  ul{
+    display: none;
+    width: 141px;
+    position: absolute;
+    background: #5c626e;
+    top: 50px;
+    /*层级  适用条件  定位*/
+    z-index: 79;
+    left: 0px;
+}
+.head_top  li{
+    /*下拉菜单里面的内容*/
+    text-align: center;/*字体居中*/
+    height: 30px;
+    line-height: 47px;/*行高*/
+    padding-bottom: 20px;/**/
+}
+.head_top  li:hover{/*设置鼠标移动到相关下拉条目上，条目背景变成红色*/
+    background: red;
+}
+
+/*中间盒子及内容的设置*/
+.banner_wrap{/*中间大盒子的设置*/
+    min-width: 1260px;
+    height: 500px;
+    background: black;
+    position: relative;
+}
+.banner_body{/*包裹具体内容的盒子*/
+    width: 1260px;/*通栏设置*/
+    height: 500px;
+    position: relative;
+    margin: 0 auto;/*包裹内容的盒子居中*/
+    color: white;/*字体颜色*/
+}
+.banner_pic{/*图片的*/
+    float: left;
+    margin-top: 25px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.banner_turn{
+    width: 490px;
+    height: 446px;
+    position: relative;
+
+}
+.banner1{
+    position: relative;
+    width: 490px;
+    height: 210px;
+    background: black;
+}
+.banner1:after{
+    content: "";
+    display: block;
+    width: 490px;
+    opacity: 0.3;
+    height: 175px;
+    background:black url("../images/p02_plus.png")center center no-repeat;
+    position: absolute;
+    z-index: -1;
+    top: 0px;
+    left: 0px;
+    cursor: pointer;
+}
+.banner1:hover:after{z-index: 2}
+.banner1:hover p{color: red}
+.banner2{
+    position: relative;
+    width: 235px;
+    height: 210px;
+    background: black;
+    margin-right: 15px;
+}
+.banner2:after{
+    content: "";
+    display: block;
+    width: 235px;
+    opacity: 0.3;
+    height: 175px;
+    background:black url("../images/p02_plus.png")center center no-repeat;
+    position: absolute;
+    z-index: -1;
+    top: 0px;
+    left: 0px;
+    cursor: pointer;
+}
+.banner2:hover:after{z-index: 2}
+.banner2:hover p{color: red}
+.banner_turn1{/*轮播图片的设置*/
+    position: absolute;/*绝对定位  因为上一级父级加了相对定位实现四张图片同时定位到了父级内部的左上角*/
+    width: 490px;
+    display: none;/*通用样式，让他们的*/
+    height: 400px;
+}
+.banner_turnbtn span{/*左右图片点击切换的公共样式*/
+    /*给予样式过程：1.选择到这个div下面的左右按钮标签*/
+    display: block;
+    /*2.使行标签  变成块级元素  这样才能给予宽高*/
+    width: 30px;
+    height: 37px;
+    color: white;
+    position: absolute;
+    top:44%;/*3.给予按钮距离父级边框顶部的距离，让左右按钮距离上边边框高度看似居中的地方*/
+    font-size: 37px;
+    line-height: 37px;
+    opacity: 0.4;/* 透明度设置*/
+    font-weight: 800;
+    text-align: center;
+    margin-top: -18px;
+    right: 0px;/*让两个按钮均布置在右边*/
+    background: black;
+}
+.banner_turnbtn .prev{/*通过 给予的class 名字  获取到了应该在左边的按钮*/
+    left: 0px!important;
+}
+.banner_turnul{/*使用 ul 标签  给予位置*/
+    position: absolute;/*给定位*/
+    right: 0px;/*靠右*/
+    bottom: 33px;/*据下方33px*/
+ }
+.banner_turnul li{
+    float: left;/*浮动  同行显示*/
+    width: 10px;
+    height: 10px;
+    background: #cecece;
+    margin-left: 8px;/*给予小点的距离*/
+}
+.banner_turn i{/*文字轮播前面的小图片*/
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 0px;
+    bottom: 17px;
+    /*给予小图片位置，上面代码*/
+    display: block;
+    background: url("../images/play_icon_06.jpg");
+}
+.write{/*位子轮播样式*/
+    display: none;/*先隐藏所有文字  第一张默认需要展示  直接在第一个文字中设置样式，让其显示*/
+    width: 385px;
+    height: 20px;
+    position: absolute;
+    left: 30px;/*给予文字轮播空间*/
+    bottom: 17px;/*文字轮播位置*/
+}
+.banner_now{/*第一个小点默认红色*/
+    background: red!important;
+}
+/*foot*/
+.foot_wrap{/*包裹最下面部分的盒子*/
+    min-width: 1260px;
+    background: white;
+    position: relative;
+}
+.foot_body{/*包裹最下方实际内容的盒子*/
+    width: 1260px;
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.foot_ul{
+    overflow: hidden;
+    margin-top: 50px;
+    position: relative;
+    width: 620px;
+    height: 140px;
+    float: left;
+    margin-right: 7px;
+}
+.foot_left{
+    float: left;
+}
+.foot_right{
+    line-height: 19px;
+    float: left;
+    width: 362px;
+    height: 140px;
+}
+.foot_bao{/*大内容的盒子*/
+    position: relative;
+    height: 200px;
+}
+.foot_moreban{
+    width: 1260px;
+    height: 400px;
+    margin-top: 195px;
+    background: yellow;
+    display: none;
+}
+.foot_more{
+    margin-top: 20px;
+    width: 1260px;
+    height: 26px;
+    background: #cecece;
+}
+.foot_li{
+    line-height: 25px;
+   width: 129px;
+    list-style: none;
+    margin: 0 auto;
+    position: relative;
+    padding-left:16px;
+}
+.foot_li span{
+    position: absolute;
+    top: 3px;
+    left: 0px;
+    height: 16px;
+    width: 16px;
+    background: url("../images/icon06_pindao_151224.png");
+    
+}
+.span{
+    background: url("../images/icon05_pindao_151224.png")!important;
+}

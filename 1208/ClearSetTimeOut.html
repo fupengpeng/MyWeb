@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>清除延时器</title>
+</head>
+<body>
+<button id="clear">清除延时器</button>
+</body>
+<script src="轮播图/jquery.min.js"></script>
+<script>
+    var timer=null;
+    time=setTimeout(function () {
+        alert("计时5秒显示");//弹框提示
+    },5000);
+    $("button").click(function () {
+        clearTimeout(time);
+    })
+</script>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>鼠标经过图片加载大图</title>
+    <script src="../1209/jquery.min.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding:0;
+        }
+        ul,li{
+            /*隐藏 li 的格式（圆点）*/
+            list-style: none;
+        }
+        li{
+            /*从左向右浮动（排列）*/
+            float: left;
+            margin-left: 10px;
+            /*在li 标签中鼠标变成手*/
+            cursor: pointer;
+        }
+        li img{
+            /*图片的宽高*/
+            width:240px;
+            height:160px;
+        }
+        #box{
+            position: absolute;
+            /*图片的边框  */
+            border: 2px solid #ee4422;
+            /*display  none  隐藏图片*/
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<ul>
+    <li><img src="../images/abc.jpg" alt=""></li>
+    <li><img src="../images/abd.jpg" alt=""></li>
+    <li><img src="../images/abe.jpg" alt=""></li>
+    <li><img src="../images/abf.jpg" alt=""></li>
+</ul>
+
+<div id="box">
+    <img src="" alt="">
+</div>
+</body>
+<script>
+    //鼠标划入事件
+    $("li").mouseover(function () {
+        var asrc = $(this).find("img").attr("src");//获取当前图片的路径
+        console.log(asrc);
+        $("#box").show("fast");//鼠标划入图片（li）时，展示大图
+        $("#box").find("img").attr("src",asrc);
+    });
+    //大图跟随鼠标移动事件
+    $("li").mosemove(function (event) {
+        $("#box").css(
+            {"left":(event.pageX+10)+"px","top":(event.pageY+10)+"px"}
+            );
+    })
+    //鼠标划出事件
+    $("li").mouseout(function (event) {
+        $("#box").hide();
+    })
+</script>
+</html>

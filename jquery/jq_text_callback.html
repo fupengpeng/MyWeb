@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>获取元素的值和position</title>
+    <script src="../1209/jquery.min.js"></script>
+</head>
+<body>
+<ul>
+    <li>a</li>
+    <li>b</li>
+    <li>c</li>
+    <li>d</li>
+    <li>e</li>
+</ul>
+</body>
+<script>
+    $(function () {
+        $("li").text(function (index,oldValue) {
+            return index+oldValue;
+        });
+    });
+</script>
+</html>

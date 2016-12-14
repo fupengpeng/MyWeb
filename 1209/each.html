@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery.min.js"></script>
+</head>
+<body>
+<button>输出每个列表项</button>
+<ul>
+    <li>coffee</li>
+    <li>milk</li>
+    <li>tea</li>
+</ul>
+</body>
+<script>
+    $(function () {
+        $("button").click(function () {
+            $("li").each(function (i) {//i 表示当前元素的索引值
+                alert($(this).text()+i);
+                $("")
+            })
+        })
+    })
+</script>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>1.展示四张图片
+        2.鼠标划入（mouseover）图片，展示再展示大图，
+        3.在小图中移动（mousemove）时，大图跟随鼠标移动
+        4.鼠标划出（mouseout）小图片时，关闭展示大图</title>
+    <script src="../1209/jquery.min.js"></script>
+    <style>
+        .mouse{
+            width: 1000px;
+            height: 500px;
+            background-color: #ee4422;
+            color: #0f0;
+        }
+        img{
+            width: 200px;
+            height: 200px;
+
+        }
+    </style>
+</head>
+<body>
+<div class="mouse">
+    <img src="../images/abc.jpg" alt="" id="0">
+    <!--<img src="images/abd.jpg" alt="" id="1">
+    <img src="images/abe.jpg" alt="" id="2">
+    <img src="images/abf.jpg" alt="" id="3">-->
+</div>
+
+    <li>
+        <img src="" alt="">
+    </li>
+
+</body>
+<script>
+    $(function () {
+        $(".mouse").mouseover(function () {
+            $(this).animate("width","500px","")
+        });
+        $(".mouse").mousemove(function () {
+
+        });
+        $(".mouse").mouseout(function () {
+
+        });
+    });
+</script>
+</html>

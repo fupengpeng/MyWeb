@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jquery想网页中追加内容</title>
+    <script src="../1209/jquery.min.js"></script>
+</head>
+<body>
+<div>hello</div>
+</body>
+<script>
+    $(function () {
+        $("div").click(function () {
+            //方法append在对象之后追加传入的元素
+//            $(this).append("world");
+            //使用appendTo时，其调用者必须是一个html元素
+//            $("<span>hahaha</span>").appendTo($(this));
+            //在pre之前   方法prepend在对象之前添加传入的元素
+//            $(this).prepend("hahahaeeeeee")
+            //after  追加元素之后(换行)
+//            $(this).after("<p>world</p>")
+            //
+
+        })
+    })
+</script>
+</html>

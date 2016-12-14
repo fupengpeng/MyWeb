@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>动画</title>
+    <style>
+        .bigbox{
+            width:500px;
+            height:400px;
+            position: relative;
+            border:1px solid black;
+        }
+        .bigbox .demo{
+            width:100px;
+            height:30px;
+            margin-bottom: 20px;
+            text-align: center;
+            line-height:30px;
+        }
+        .box1{
+            margin-top:10px;
+            background: palegreen;
+            transition:4s linear;
+        }
+        .box2{
+            background: palevioletred;
+            transition:4s ease;
+        }
+        .box3{
+            background: salmon;
+            transition:4s ease-in;
+        }
+        .box4{
+            background: deeppink;
+            transition:4s ease-out;
+        }
+        .box5{
+            background: plum;
+            transition:4s ease-in-out;
+        }
+        .box6{
+            background: peru;
+            transition:4s cubic-bezier(0.1,0.6,0.1,0.1);
+        }
+        .box7{
+            background: darkturquoise;
+            transition:4s cubic-bezier(0.1,0.1,0.9,0.1);
+        }
+        .box8{
+            background: darkslateblue;
+            transition:4s cubic-bezier(0.1,0.1,0.1,0.1);
+        }
+        .bigbox:hover .box1{
+            margin-left:380px;
+            transform:rotate(360deg)  scale(2);
+            background: orange;
+        }
+        .bigbox:hover .box2{
+            margin-left:380px;
+            transform:rotate(360deg) scale(1.5);
+            background: salmon;
+        }
+        .bigbox:hover .box3{
+            margin-left:380px;
+            transform:rotate(360deg);
+            background: aqua;
+        }
+        .bigbox:hover .box4{
+            margin-left:380px;
+            transform:rotate(360deg);
+            background: gold;
+        }
+        .bigbox:hover .box5{
+            margin-left:380px;
+            transform:rotate(360deg);
+            background: firebrick;
+        }
+        .bigbox:hover .box6{
+            margin-left:380px;
+            transform:rotate(360deg) scale(0.5);
+            background:darkviolet;
+        }
+        .bigbox:hover .box7{
+            margin-left:380px;
+            transform:rotate(360deg);
+            background:salmon;
+        }
+        .bigbox:hover .box8{
+            margin-left:380px;
+            transform:rotate(360deg);
+            background:limegreen;
+        }
+    </style>
+</head>
+<body>
+<div class="bigbox">
+<div class="box1 demo">001</div>
+<div class="box2 demo">002</div>
+<div class="box3 demo">003</div>
+<div class="box4 demo">004</div>
+<div class="box5 demo">005</div>
+<div class="box6 demo">006</div>
+<div class="box7 demo">007</div>
+<div class="box8 demo">008</div>
+</div>
+</body>
+</html>

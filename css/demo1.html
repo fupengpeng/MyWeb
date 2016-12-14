@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>百度一下，你就知道</title>
+    <link rel="stylesheet" href="baidu.css">
+    <style>
+        /*font-weight: 700;  设置标签内容的字体宽度*/
+        a{
+            color: black;
+            font-size: 15px;
+            font-weight: 700;
+            margin-right: 10px;
+        }
+
+        .normal_font{
+            font-weight: 300;
+        }
+        /*鼠标放在对应的a上面时，显示设置颜色*/
+        a:hover{
+            color: #38f;
+        }
+        /*使用标签属性class调用*/
+        .header{
+            /*margin-top: 20px;  居上边20px
+            float: right;  向右浮动*/
+            margin-top: 20px;
+            float: right;
+        }
+        /*使用id值调用*/
+        #more{
+            color: #fff;
+            background-color: #3388ff;
+            width: 70px;
+            height: 20px;
+            display: block;
+            float: right;
+            text-align: center;
+            /*line-height   行高*/
+            line-height: 20px;
+        }
+        .logo{
+            text-align: center;
+            clear: right;
+        }
+        #camera{
+            background: url("../images/camera.png");
+            width: 18px;
+            height: 16px;
+            display: inline-block;
+            position: absolute;
+            right: 8px;
+            top: 8px;
+        }
+        #camera:hover{
+            background-position: 0px -20px;;
+        }
+        form{
+            /*输入框和按钮居中*/
+            text-align: center;
+            position: relative;
+            margin-top: 20px;
+        }
+        .searchBox{
+
+            display: inline-block;
+            width: 534px;
+            height: 30px;
+            position: relative;
+            /*solid实线  dashed，dotted*/
+            border: 1px solid #ccc;
+        }
+        .search{
+            width: 500px;
+            height: 22px;
+            position: absolute;
+            top: 5px;
+            left: 8px;
+            border:0;
+            /*transparent 透明*/
+            background: transparent;
+            /*设置当输入框被选中时，外面不*/
+            outline: 0;
+        }
+        #submit{
+            background: #3388ff;
+            color: #fff;
+            height: 34px;
+            width: 80px;
+            font-size: 15px;
+            border: 0;
+            position: absolute;
+            right: -80px;
+            top: -1px;
+        }
+        .footer{
+            position: absolute;
+            bottom: 23px;
+            height: 100px;
+            width:100%;
+            font-size: 12px;
+        }
+        .footer_wrapper{
+            /*使用margin: 0 auto; 居中时，必须设置宽度*/
+            margin: 0 auto;
+            width: 660px;
+        }
+        .footer_left{
+            display: inline-block;
+            text-align: center;
+
+        }
+        .part1{
+            float: left;
+            margin: 15px;
+        }
+        .part2{
+            float: left;
+            margin: 15px;
+        }
+        .footer_img{
+            width: 60px;
+            height: 60px;
+            float: left;
+        }
+        .footer_img{
+            background: url("../images/code_001.png")
+            no-repeat;
+        }
+        .part2.footer_img{
+            background: url("../images/code_nuomi.png")
+            no-repeat;
+        }
+        .footer_disc{
+            height: 40px;
+            line-height: 20px;
+            margin: 10px 0;
+            float: left;
+        }
+        .footer_right{
+            display: inline-block;
+            color: #999;
+            line-height: 20px;
+            margin-left: 20px;
+
+        }
+        .footer_right a{
+            color: #999;
+            font-weight: 200;
+        }
+        #police{
+            display: inline-block;
+            width: 14px;
+            height:17px;
+            background: url("../images/icons.png") no-repeat -623px -96px;
+        }
+        #icp{
+            display: inline-block;
+            width: 14px;
+            height: 17px;
+            background: url("../images/icons.png") no-repeat -600px -96px;
+        }
+        .footer_second_line{
+
+        }
+    </style>
+</head>
+<body>
+<!--标题标签-->
+
+<!--a 标签属性href 用于指定跳转到网址-->
+<div class="header">
+<a href="https://www.nuomi.com/?cid=002540">糯米</a>
+<a href="http://news.baidu.com/">新闻</a>
+<a href="https://www.hao123.com/">hao123</a>
+<a href="http://map.baidu.com/">地图</a>
+<a href="http://v.baidu.com/">视频</a>
+<a href="http://tieba.baidu.com/">贴吧</a>
+<a class="normal_font" href="https://www.nuomi.com/?cid=002540">登录</a>
+<a class="normal_font" href="https://www.nuomi.com/?cid=002540">设置</a>
+<a id="more">更多产品</a>
+</div>
+
+<!--div.logo  tab键快捷生成下标签-->
+<div class="logo">
+    <!--显示图片:src设定图片的路径  alt用于设置图片的说明-->
+    <img src="../images/logo.png" alt="百度一下" width="270" height="129">
+</div>
+<!--表单的跟标签form，action用于指定将表单的信息提交给谁，method用于指定提交信息的方式get或者post-->
+<form action="1.php" method="get">
+    <!--type用于指定输入框类型-->
+    <!--name  属性指定的是提交数据时，这个数据的key   value指定默认值-->
+    <!--1.单行输入文本框  text-->
+    <span class="searchBox">
+        <input class="searchBox" type="text" height="20px"><span id="camera"></span>
+        <input type="button" id="submit" value="百度一下">
+    </span>
+
+</form>
+<!--底部-->
+<div class="footer">
+    <div class="footer_wrapper">
+        <div class="footer_left">
+            <div class="part1">
+                <div class="footer_img" >
+
+                </div>
+                <div class="footer_disc">
+                    <b>手机百度</b><br>
+                    快人一步
+                </div>
+            </div>
+            <div class="part2">
+                <div class="footer_img">
+
+                </div>
+                <div class="footer_disc">
+                    <b>百度糯米</b><br>
+                    一元大餐
+                </div>
+            </div>
+        </div>
+        <div class="footer_right">
+            <a href="">把百度设为主页</a>
+            <a href="">关于百度</a>
+            <a href="">About  Baidu</a>
+            <a href="">百度推广</a><br>
+            <a href="">©2016 Baidu    </a>
+            <a class="footer_second_line" href="">使用百度前必读</a>
+            <a href="">意见反馈</a>
+            <a href="">京ICP证030173号</a><br>
+            <a href="">京公网安备11000002000001号</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

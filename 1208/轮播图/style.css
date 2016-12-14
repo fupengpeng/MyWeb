@@ -1,0 +1,92 @@
+*{
+    margin:0;
+    padding:0;
+}
+ul,li{
+    list-style: none;
+}
+
+.bigbox{
+    width:300px;
+    height:400px;
+    margin:0 auto;
+    border: 2px solid black;
+    overflow: hidden;/*隐藏超出部分*/
+    position: relative;
+}
+.boxItem{
+    width:300px;
+    height: 400px;
+    font-size: 200px;
+    text-align: center;/*文字居中*/
+    line-height: 400px;
+    float: left;
+}
+.boxContainer{
+    width:1800px;
+    height:400px;
+    background: #ff0000;
+    /*相对父标签定位*/
+    position: absolute;
+    left:0;
+    top:0;
+}
+ul{
+    width:180px;
+    height:30px;
+    position: absolute;
+    left:50px;
+    bottom: 20px;
+}
+li{
+    width:30px;
+    height:28px;
+    float: left;
+    border: 1px solid saddlebrown;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 28px;
+    margin-left:3px;
+}
+.active{
+    background: skyblue;
+}
+
+.btn{
+    position: absolute;
+    width:30px;
+    height:50px;
+    text-align: center;
+    background: chocolate;
+    line-height: 50px;
+    font-size: 30px;
+    opacity: 0.5;/*透明度  取值0-1*/
+    top:40%;
+    cursor: pointer;
+}
+.left{
+    left:20px;
+}
+.right{
+    right:20px;
+}
+
+img{
+    width:300px;
+    height: 400px;
+}
+.red{
+    background: red;
+}
+.yellow{
+    background: yellow;
+}
+.blue{
+    background: blue;
+}
+.orange{
+    background: orange;
+}
+.green{
+    background: green;
+}

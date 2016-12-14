@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jquery之使用</title>
+    <script src="../1209/jquery.min.js"></script>
+    <style>
+        div{
+            width: 200px;
+            height: 100px;
+            background: #e42;
+        }
+    </style>
+</head>
+<body>
+<div class="selected">
+    
+</div>
+<a href="https://www.baidu.com/"></a>
+</body>
+<script>
+    $(function () {
+        //获取div的class属性
+        $("div").click(function () {
+            console.log($(this).attr("class"));
+            console.log($("a").attr("href"));
+            $(this).attr("class","unselected");
+        })
+    })
+</script>
+</html>

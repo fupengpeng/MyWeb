@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>百叶窗1207</title>
+    <script src="../1209/jquery.min.js"></script>
+    <style>
+        #box{
+            width: 640px;
+            height:390px;
+            margin: 0 auto;
+            /*设置隐藏超出部分的内容*/
+            overflow: hidden;
+            position: relative;
+        }
+        img{
+            position: absolute;
+            height: 388px;
+            width: 428px;
+            border:1px solid #ee4422;
+        }
+    </style>
+</head>
+<body>
+<div id="box">
+    <img id="0" src="../images/abc.jpg" alt="">
+    <img id="1" src="../images/abd.jpg" alt="">
+    <img id="2" src="../images/abe.jpg" alt="">
+    <img id="3" src="../images/abf.jpg" alt="">
+    <img id="4" src="../images/abg.jpg" alt="">
+    <img id="5" src="../images/abh.jpg" alt="">
+    <img id="6" src="../images/abi.jpg" alt="">
+    <img id="7" src="../images/abj.jpg" alt="">
+</div>
+</body>
+<script>
+    $(function () {
+        for(var i = 0 ;i < 8 ; i++){
+            $("img").eq(i).css("left",i*80+"px");
+        }
+        $("img").hover(function () {
+            console.log($(this).attr("id"));//index
+            var index= Number($(this).attr("id"));
+
+//            将当前这张图片和他之前图片的left属性设置成图片的需要*30px
+            for(var i = 0;i <= index; i++){
+                $("img").eq(i).stop().animate({"left":(i*30)+"px"},10);
+            }
+//将当前这张图片之后的图片，left属性设置成它的(序号-1)*30+图片的宽度
+            for (var i = index + 1; i < 8; i++) {
+                var leftPos = (i-1)*30+428;
+                $("img").eq(i).stop().animate({"left":leftPos+"px"},10);
+            }
+        }
+            ,function () {
+//            鼠标移出时让页面恢复原状
+                for(var i = 0 ;i < 8 ; i++){
+                    $("img").eq(i).css("left",i*80+"px");
+                }
+            }
+        );
+    });
+</script>
+</html>

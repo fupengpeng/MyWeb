@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>transform</title>
+    <style>
+        .div1{
+            width:480px;
+            height: 320px;
+            background: url("../images/ab1.jpg");
+        }
+        .div2{
+            width:480px;
+            height: 320px;
+            background: url("../images/ab1.jpg");
+            transform: scale(1.1);
+        }
+        /*transform: translate(150px,100px);   150px  说明选定对象平移（向右）的像素数，取负值时是反向平移。 100px  说明选定对象平移（向下）像素*/
+        .div3{
+            width:480px;
+            height: 320px;
+            background: url("../images/ab1.jpg");
+            transform: translate(100px);
+        }
+        /*transform: rotate(20deg);  以中心点为中心旋转20度*/
+        .div4{
+            width:480px;
+            height: 320px;
+            background: url("../images/ab1.jpg");
+            transform: rotate(20deg);
+        }
+        /*transform: skew(0deg,3deg);  第一个参数表示横向错切， 第二个参数表示竖向错切*/
+        .div5{
+            width:480px;
+            height: 320px;
+            background: url("../images/ab1.jpg");
+            transform: skew(0deg,3deg);
+        }
+        </style>
+</head>
+<body>
+<h1>原始图片</h1>
+<div class="div1"></div>
+<h1>scale()</h1>
+<div class="div2"></div>
+<h1>translate平移</h1>
+<div class="div3"></div>
+<h1>rotate旋转</h1>
+<div class="div4"></div>
+<h1>skew错切</h1>
+<div class="div5"></div>
+</body>
+</html>

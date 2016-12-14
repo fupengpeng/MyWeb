@@ -1,0 +1,245 @@
+*{  margin:0;  padding: 0;  font-family: "Microsoft YaHei";/*设置默认字体*/  }
+.clear{  clear: both;/*创建一个class  里面带有属性，是用来清除浮动*/  }
+li{  list-style: none;/*清除li里面的圆点*/  }
+img{  border: none 0;/*清楚边框（仅限图片）*/  }
+a{  text-decoration: none;/*清除a标签的下划线*/  }
+#header{  width: 1120px;  height:103px;  margin: 0 auto;  background: yellow;  overflow: hidden;/*作用？   让 .logo 的margin-top 达到实际效果*/  }
+.logo{  width: 200px;  height: 51px;  margin-top: 25px;  float: left;
+}
+.nav{  width:500px;  float: left;  line-height: 103px;  margin-left: 180px;
+}
+.nav li{  float: left;  width:75px;  /*height: 33px; margin-top:35px ;*/
+}
+.nav li a{  color: #000;
+}
+.nav li a:hover{  color: red;
+}
+.login_box{  width: 217px;
+    height: 24px;
+    float: right;
+    color: #9f9f9f;
+    margin-top: 25px;
+}
+.search_box{
+    width:180px;
+    height: 30px;
+    float: right;
+    background: url("../images/search_17.gif") no-repeat;
+    padding-right: 20px;
+    margin-top: 5px;
+    position: relative;
+
+}
+.search_box .text{
+    width:134px;
+    height:28px;
+    border: none;
+    margin-left: 5px;  margin-top: 1px;
+    float: left;
+}
+.search_box .putIn{
+    width:30px;
+    height:30px;
+    line-height: 30px;
+    border:none;
+    opacity: 0.5;/*透明度*/
+    cursor: pointer;/*鼠标变换*/
+    filter: alpha(opacity=50);
+}
+.search_box span{/*实现了搜索框的上移*/
+    /*font-size: 13px;
+    color: #333333;
+    position: absolute;
+    top:5px;
+    left:5px;*/
+}
+
+#banner{
+    width:1190px;
+    height: 350px;
+    margin: 0ch auto;
+    margin-top: 50px;
+}
+/*主体部分*/
+#content{
+    height: 2055px;
+    background: gainsboro;
+    overflow: hidden;
+}
+/*select*/
+.select{
+    width:1190px;
+    height:265px;
+    margin:0 auto;
+    background: white;
+    margin-top: 30px;
+    padding-top: 15px;
+}
+.select ul{
+     width: 980px;
+     height: 54px;
+    margin: 0px 100px 15px 15px;/*参数1：上  参数2：右  参数3：下  参数4：左*/
+     color: #9f9f9f;
+     font-size: 14px;
+     border-bottom: 1px solid #cccccc;
+ }
+.select ul li{
+    float: left;
+    line-height: 54px;
+    margin-right: 10px;
+}
+/*phone_list*/
+.phone_list{
+    width:1192px;
+    height:1623px;
+    margin: 0 auto;
+    margin-top: 10px;
+    background: white;
+}
+/*商品盒子设置*/
+#content .phone_list .list_one .list_one_phone{
+    width:296px;
+    height:540px;
+    background: #00ff00;
+    border-right: 1px solid red;
+    border-top: 1px solid red;
+    float: left;
+}
+/*第一行商品设置开始*/
+/*标题设置*/
+#content .phone_list .list_one .list_one_phone h4{
+    text-align: center;
+    margin-top: 10px;
+}
+/*功能设置*/
+#content .phone_list .list_one .list_one_phone span{
+    display: block;/*将行标签转换为块级元素*/
+    text-align: center;
+    color: #cccccc;
+    font-size: 14px;
+    margin-top: 10px;
+}
+/*售价设置*/
+#content .phone_list .list_one .list_one_phone p{
+    text-align: center;
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+#content .phone_list .list_one:first-child .list_one_phone{
+    border-top: none;/**/
+}
+/*第一行商品设置结束*/
+
+/*page_btn*/
+.page_btn{
+    width:1190px;
+    height: 70px;
+    background: white;
+    margin:0 auto;
+    margin-top: 20px;
+}
+.page_btn .page_num{
+    width:230px;
+    height:30px;
+    margin: 0 auto;
+    padding-top: 22px;
+}
+.page_btn .page_num input{
+    width:26px;
+    height:26px;
+    border: 1px solid #cccccc;
+    background: #ffffff;
+    cursor: pointer;
+}
+
+/*尾部布局*/
+/*尾部布局的大盒子*/
+#foot{
+    width:1190px;
+    height:130px;
+    margin: 0 auto;
+    border-bottom: 1px solid #cccccc;
+}
+#foot dt,dd{/*#foot dt,dl{  表示在id为foot的标签中寻找标签名为dt和dl两个标签*/
+    float: left;
+}
+#foot dl{
+    height:45px;
+    margin-top: 60px;
+    color: #777;
+    margin-right: 170px;
+    float: left;
+}
+#foot dl a{
+    color: black;
+    text-decoration: none;
+}
+#foot dl a:hover{
+    color: #cccccc;
+}
+/*最后的信息部分*/
+#about{
+   width: 1190px;
+    height:258px;
+    margin:0 auto;
+}
+#about ul{
+    cursor: pointer;
+    float: left;
+    width: 190px;
+    margin-top: 40px;
+}
+#about ul li a{
+    color:black;
+    font-size: 12px;
+    line-height: 30px;
+}
+#about ul li a:hover{
+    color: #cccccc;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../1209/jquery.min.js">
+    </script>
+    <style>
+        ul{
+            padding:0;
+            list-style: none;
+        }
+        li{
+            float: left;
+            width: 20px;
+            height: 20px;
+            background-color: #aa3;
+            margin-right: 20px;
+            /*圆角*/
+            border-radius: 20px;
+        }
+        .now{
+            background-color: #ee4422;
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+<input type="button" id="clickMe" value="点击消除li">
+</body>
+<script>
+    $(function () {
+        $("li").hover(function () {
+            $(this).attr("class","now");
+        },function () {
+            $(this).attr("class","");
+        })
+        $("#clickMe").click(function () {
+            //移除元素
+//            $("li").remove();
+            //
+            $("#clickMe").remove(".now");
+            //removeAttr("class")  移除class属性
+//            $("li").removeAttr("class");
+            //empty()  清空元素的内容
+//            $("div").empty();
+            //
+            $("li").
+
+        })
+    })
+</script>
+</html>

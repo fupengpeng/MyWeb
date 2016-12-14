@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jqeryu遍历</title>
+    <script src="../1209/jquery.min.js">
+    </script>
+</head>
+<body>
+<div class="ye">
+<div class="super">
+    <div class="sub" id="zi01">
+
+    </div>
+    <div class="sub" id="zi02">
+
+    </div>
+    <div class="sub" id="zi03">
+
+    </div>
+    <div class="sub" id="zi04">
+
+    </div>
+</div>
+</div>
+</body>
+<script>
+    $(function () {
+        $(".sub" ).parent();//找到的是super
+        $(".sub" ).parents();//找到的是super，ye等所有祖先
+        $(".sub" ).parents(".ye");//找到传入的ye
+        $(".sub" ).parentsUntil(".body");//一直寻找到body为止
+
+        $(".ye" ).children();//找到的是下一代super
+        $(".ye" ).find();//找到的是所有后代
+        $(".ye" ).find(".sub" );//找到的是sub
+
+        $("#zi01" ).sibling();//找到的是兄弟姐妹  zi02  zi03等
+        $("#zi03" ).prev();//找到的是第一个兄、姐
+        $("#zi01" ).prevAll();//找到的是兄、 姐
+        $("#zi01" ).sibling();//找到的是兄弟姐妹  zi02  zi03等
+        $("#zi01" ).sibling();//找到的是兄弟姐妹  zi02  zi03等
+
+    })
+</script>
+</html>
