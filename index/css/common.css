@@ -1,0 +1,21 @@
+@charset "utf-8";/*声明编码格式*/
+/* 公共 */
+*{
+    margin:0;
+    padding:0;
+}
+img{
+    border:none;
+}
+a{
+    text-decoration:none;
+    cursor:pointer;/*a标签连接  点击时显示小手*/
+}
+ul li{
+    list-style:none;/*去除列表的样式*/
+}
+body{
+    font-family:STKaiti, KaiTi_GB2312, "楷体", "宋体", Arial, Helvetica, sans-serif;
+    font-size:16px;
+    background:#f1f2f6;
+}

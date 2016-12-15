@@ -90,7 +90,7 @@ a{  text-decoration: none;/*清除a标签的下划线*/  }
 }
 /*phone_list*/
 .phone_list{
-    width:1192px;
+    width:1193px;
     height:1623px;
     margin: 0 auto;
     margin-top: 10px;
@@ -98,11 +98,10 @@ a{  text-decoration: none;/*清除a标签的下划线*/  }
 }
 /*商品盒子设置*/
 #content .phone_list .list_one .list_one_phone{
-    width:296px;
+    width:297px;
     height:540px;
-    background: #00ff00;
-    border-right: 1px solid red;
-    border-top: 1px solid red;
+    border-right: 1px solid #cccccc;
+    border-top: 1px solid #cccccc;
     float: left;
 }
 /*第一行商品设置开始*/

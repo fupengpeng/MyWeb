@@ -42,18 +42,18 @@ $(function(){
 
            $(".banner_turnbtn .next").click(function(){/*点击右边按钮，使得 c++  c值改变  调用turn（）方法*/
                c++;
-               turn()
+               turn();
            });
 
            $(".banner_turnbtn .prev").click(function(){/*点击左边按钮， 使得 c-- 进行判断c值，不能让其一直递减，否则不能形成循环，对c 值进行判断，限制其值大于0 */
                c--;
                c=c<0?3:c;
-               turn()
+               turn();
            });
 
            $(".banner_turnul li").hover(function(){/*触摸小点  发生划入事件*/
                c=$(this).index();/*使 c 等于当前触摸到的小点的索引值  */
-               turn()
+               turn();
            });
        })();
 
