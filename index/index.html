@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>主体实现</title>
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/index.css">
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/move.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
@@ -13,7 +14,49 @@
 <div id="header" style="height: 120px; background: #332347;"></div><!--留下头部位置-->
 <!--进入轮播-->
 <div class="banner_wrap">
+    <!--按纽栏-->
+    <div class="bchange"><!--按纽栏-->
 
+        <span class="prev"></span><!--左按钮-->
+
+        <div class="middle_points"><!--中间部分-->
+            <div class="middle_wrap">
+                <div class="middle"><!--三个点的盒子-->
+                    <span class="now"></span><!--第一个点-->
+                    <span></span><!--第二个点-->
+                    <span class="last"></span><!--第三个点-->
+                </div>
+            </div>
+        </div>
+
+        <span class="next"></span><!--右按钮-->
+
+    </div>
+    <!--单个轮播001-->
+    <div class="banner_one banner_01" style="display: none;"><!--轮播盒子01-->
+        <div class="banner_one_contents">
+            <img class="image01" src="images/banner01_01.png" alt="">
+            <img class="image02" src="images/banner01_02.png" alt="">
+            <img class="image03" src="images/banner01_03.png" alt="">
+        </div>
+    </div>
+    <!--单个轮播002-->
+    <div class="banner_one banner_02" style="display: none;"><!--轮播盒子02-->
+        <div class="banner_one_contents">
+            <img class="image01" src="images/banner02_01.png" alt="">
+            <img class="image02" src="images/banner02_02.png" alt="">
+            <img class="image03" src="images/banner02_03.png" alt="">
+        </div>
+    </div>
+    <!--单个轮播003-->
+    <div class="banner_one banner_03" ><!--轮播盒子03-->
+        <div class="banner_one_contents">
+            <img class="image01" src="images/banner03_01.png" alt="">
+            <img class="image02" src="images/banner03_02.png" alt="">
+            <img class="image03" src="images/banner01_03.png" alt="">
+        </div>
+    </div>
 </div>
+
 </body>
 </html>

@@ -3,4 +3,143 @@
     height:594px;
     position: relative;
     min-width: 1100px;/*最小宽度*/
+    background: #ffffff;
+}
+/*轮播开始*/
+/*轮播按钮*/
+.bchange{
+    width:216px;
+    height:29px;
+    position: absolute;
+    background: url("../images/next&prev_line.png") no-repeat left center;/*no-repeat  是否循环  left center  位置*/
+    left:50%;
+    margin-left:-108px;
+    bottom: 40px;
+}
+.bchange>span{/*选择了父标签（类名为bchange）的所有span标签    节约代码（选择了两个完成相同的样式）*/
+    position: absolute;/*绝对定位  父级是谁？？？？？？*/
+    width:29px;
+    height: 29px;
+    cursor: pointer;
+    background: url("../images/prev_jiantou.png") no-repeat;
+}
+.bchange>.next{/*选择父标签（类名为bchange）的所有类名为next的标签    区分样式（将之前两个样式区分开来）*/
+    right:0;
+    top: 0px;
+    background: url("../images/next_jiantou.png");
+}
+/*按钮动画*/
+.prev:hover{
+    background: url("../images/prev_jiantou_hover.png");
+}
+.next:hover{
+    background: url("../images/next_jiantou_hover.png");
+}
+.prev:hover, .next:hover{
+    /*animation:1s linear 0s normal none 1 running rubberBand;*/
+}
+.bchange .middle_points{
+    margin: 0 auto;
+    width:45px;
+    height:14px;
+    background: url("../images/next&prev_mbg01.png") no-repeat;
+    margin-top: 7px;
+}
+.bchange .middle_wrap{
+    background: url("../images/next&prev_mbg03.png") no-repeat right;
+    height:14px;
+}
+.bchange .middle{
+    background: url("../images/next&prev_mbg02.png") repeat-x;/*repeat-x  横向平铺*/
+    height: 14px;
+    margin: 0 6px;
+}
+.bchange .middle span{
+    display: block;/*变成块级元素  可设置宽高*/
+    float: left;
+    width: 6px;
+    height:6px;
+    background: url("../images/next&prev_others.png");
+    cursor: pointer;
+    margin-top: 4px;
+    margin-right: 5px;
+}
+.bchange .middle .last{
+    margin-right: 0px;
+}
+.bchange .middle .now{
+    background: url("../images/next&prev_now.png");
+}
+
+/*轮播开始  1216*/
+/*单个轮播*/
+.banner_one{
+    height: 593px;
+    position: absolute;
+    left:0;
+    top:0;
+    width: 100%;
+}
+/*轮播第一张图片的背景图*/
+.banner_01{
+    background: url("../images/banner01_bg.jpg") no-repeat top center;
+}
+.banner_one_contents{
+    width:1100px;
+    margin: 0 auto;
+    position: relative;
+}
+/*第一张背景图标语图片设置*/
+.banner_01 .image01{
+    position: absolute;/*相对于banner_01*/
+    top:204px;
+    left:343px;
+}
+.banner_01 .image02{
+    position: absolute;
+    top:300px;
+    left:375px;
+}
+.banner_01 .image03{
+    position: absolute;
+    top: 354px;
+    left:375px;
+}
+/*第二张背景图标语图片设置*/
+.banner_02{
+    background: url("../images/banner02_bg.jpg") no-repeat top center;
+}
+.banner_02 .image01{
+    position: absolute;/*相对于banner_01*/
+    top:177px;
+    left:61px;
+}
+.banner_02 .image02{
+    position: absolute;
+    top:70px;
+    left:261px;
+}
+.banner_02 .image03{
+    position: absolute;
+    top: 195px;
+    left:270px;/*384*/
+}
+/*第三张背景图标语图片设置*/
+.banner_03{
+    background: url("../images/banner01_bg.jpg") no-repeat top center;
+}
+.banner_03 .image01{
+    position: absolute;/*相对于banner_01*/
+    top:189px;
+    left:384px;
+}
+.banner_03 .image02{
+    position: absolute;
+    top:298px;
+    left:397px;
+}
+.banner_03 .image03{
+    position: absolute;
+    top: 354px;
+    left:375px;/*384*/
 }
