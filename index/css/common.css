@@ -19,3 +19,33 @@ body{
     font-size:16px;
     background:#f1f2f6;
 }
+
+.fixex_tip{
+    width:87px;
+    height:161px;
+    position: fixed;
+    bottom:160px;
+    right: 40px;
+    display: none;
+}
+.scroll_top{
+    width:50px;
+    height:50px;
+    background: url("../images/scroll_top_bg.png") no-repeat;
+    cursor: pointer;
+    margin-left: 17px;
+    margin-bottom: 24px;
+}
+.scroll_top:hover{
+    background-position: 0 -50px;
+    text-replace:all 0.3s ease 0s;
+}
+.fixe_contactus{
+    width:87px;
+    height:87px;
+    position: absolute;
+    right:0;
+    top:74px;
+    background:url(../images/fixed_contactus.png)top right no-repeat;
+    cursor:pointer;
+}
