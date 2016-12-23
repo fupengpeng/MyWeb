@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>全屏滚动</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .wrap{
+            min-width:1100px;
+            overflow: hidden;
+            height:700px;
+            background: blue;
+        }
+        .content{
+            width:100%;
+            min-width:100px;
+            position: relative;
+        }
+        .aaa{
+            width:100%;
+            min-width: 1100px;
+            height:700px;
+            background:RED;
+        }
+        .nav{
+            width:200px;
+            height: 30px;
+            position:fixed;
+            bottom: 20px;
+            left:50%;
+            margin-left: -100px;
+        }
+        .nav span{
+            width:20px;
+            height:20px;
+            display: inline-block;/*使其转化为块*/
+            background: #cccccc;
+        }
+        .nav .now{
+            background: darkmagenta;
+        }
+    </style>
+    <script src="jquery-1.8.3.min.js"></script>
+    <script src="move.js"></script>
+    <script>
+        $(function () {
+            /*获取窗口高度*/
+           $(".wrap,.aaa").css({height:$(window).height()+"px"});
+           $(".aaa").css({width:$(window).width()+"px"});
+           /*当屏幕宽度改变*/
+           $(window).resize(function () {
+               /*获取窗口高度*/
+               $(".wrap,.aaa").css({height:$(window).height()+"px"});
+               /**/
+               $(".aaa").css({width:$(window).width()+"px"});
+           });
+           var scrollFunc=function (e) {
+               e=e||window.event;
+               if (e.wheelDelta){
+                   /*浏览器滚动事件*/
+                   if(e.wheelDelta>0){/*滚轮向上滚动*/
+                       alert(1);
+                   }else if (e.wheelDelta<0){/*滚轮向下滚动*/
+                       alert(2);
+                   }
+               }
+               else if (e.detail){
+                   /*火狐的滚动事件*/
+                   if(e.detail>0){
+                       /*向下滚动*/
+                       alert(3);
+                   }else if (e.detail<0){
+                       /*向上滚动*/
+                       alert(4);
+                   }
+               }
+           }
+           /*火狐事件绑定*/
+           if(document.addEventListener){
+               document.addEventListener("DOMMouseScroll",scrollFunc,false);
+           }
+           /*ie,chrome事件绑定*/
+           window.onmousewheel = document.onmousewheel = scrollFunc;
+        });
+    </script>
+
+<!--    <script>
+        $(function () {
+            $(".wrap,.aaa").css({height:$(window).height()+"px"});
+//            获得窗口高度
+            $(".aaa").css({width:$(window).width()+"px"});
+
+            $(window).resize(function () {
+//                当屏幕宽度改变
+                $(".wrap,.aaa").css({height:$(window).height()+"px"});
+//            获得窗口高度
+                $(".aaa").css({width:$(window).width()+"px"});
+            })
+            var scrollFunc=function (e) {
+                e=e||window.event;
+                if(e.wheelDelta){
+//                    ie   谷歌   浏览器滚轮事件
+                    if(e.wheelDelta>0){
+//                        滚轮向上滚动
+                        alert(1)
+                    }else if(e.wheelDelta<0){
+//                        滚轮向下滑动
+                        alert(2)
+                    }
+                }else if (e.detail){
+//                    火狐的滚动事件
+                    if(e.detail>0){
+//                        向下滚动
+                        alert(2)
+                    }else if (e.detail<0){
+//                        向上滚动
+                        alert(1)
+                    }
+                }
+            }
+            /*火狐事件绑定*/
+            if(document.addEventListener){
+                document.addEventListener("DOMMouseScroll",scrollFunc,false);
+            }
+            /*ie,chrome*/
+            window.onmousewheel = document.onmousewheel = scrollFunc;
+        })
+    </script>-->
+</head>
+<body>
+<div class="wrap">
+    <div class="content">
+        <div class="aaa" style="background: green">444444444444444444444444</div>
+        <div class="aaa" style="background: blue">wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww</div>
+        <div class="aaa" style="background: orange">woaixuexillllllllllllllllllllllll</div>
+        <div class="aaa" style="background: aqua">wooooooooooooooooooooooooooo</div>
+    </div>
+</div>
+<div class="nav">
+    <span class="now"></span>
+    <span></span>
+    <span></span>
+    <SPAN></SPAN>
+</div>
+
+</body>
+</html>
